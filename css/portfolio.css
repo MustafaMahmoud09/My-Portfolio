@@ -411,15 +411,14 @@ header .small-links {
   }
 }
 
-@media screen and (max-width: 920px) {
+@media screen and (max-width: 920px) {  
   .home .container {
     grid-template-columns: repeat(auto-fill, 550px);
     justify-content: center;
   }
 
   .home {
-    background: linear-gradient(180deg, var(--home-color), #9bb28666, transparent);
-
+    background: linear-gradient(180deg, var(--home-color), #0c6389, #afc79a66, #71927466);
   }
 }
 
@@ -629,6 +628,7 @@ header .small-links {
 }
 
 @media screen and (max-width: 920px) {
+
   .about-me {
     gap: 44px;
     grid-template-columns: repeat(auto-fill, 500px);
