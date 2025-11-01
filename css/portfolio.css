@@ -296,7 +296,7 @@ header .small-links {
 .home {
   background-color: var(--home-color);
   height: calc(100vh - 99.75px);
-  background: linear-gradient(90deg, var(--home-color), #0c6389, #afc79a66, #71927466);
+  background: linear-gradient(90deg, #217aa1, #2d91bc, #80c1ac66, #71927a66);
 }
 
 .container {
@@ -328,7 +328,7 @@ header .small-links {
 }
 
 .home .container .desc h1 span {
-  color: var(--contact-color);
+  color: #3914d2;
 }
 
 .home .container .desc .second {
@@ -348,6 +348,7 @@ header .small-links {
   width: 130px;
   text-align: center;
   transition: var(--gradient-transition);
+  box-shadow: 1.5px 1.5px 1.5px 1.5px #05669654;
 }
 
 .home .container .desc a:hover {
@@ -418,7 +419,7 @@ header .small-links {
   }
 
   .home {
-    background: linear-gradient(180deg, var(--home-color), #0c6389, #afc79a66, #71927466);
+    background: linear-gradient(180deg,#217aa1, #2d91bc, #80c1ac66, #71927a66);
   }
 }
 
@@ -976,7 +977,7 @@ label {
     justify-content: center;
   }
 
-   .contact-us  .social-container-small ul {
+  .contact-us .social-container-small ul {
     flex-direction: row;
   }
 
