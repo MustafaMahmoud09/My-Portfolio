@@ -12,6 +12,16 @@
   <link rel="stylesheet" href="css/all.min.css">
   <link rel="stylesheet" href="css/portfolio.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css">
+  <script>
+    // Apply theme immediately to prevent flash of unstyled content
+    (function() {
+      const theme = localStorage.getItem('theme') || 
+        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      if (theme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
 
 </head>
 
@@ -30,6 +40,10 @@
         <li><a href="#portfolio">Portfolio</a></li>
       </ul>
     </div>
+    <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode">
+      <i class="fa-solid fa-moon" id="darkModeIcon"></i>
+      <i class="fa-solid fa-sun" id="darkModeIconSun" style="display: none;"></i>
+    </button>
     <div class="small-links rowflex">
       <span class="icon">
         <span></span>
@@ -44,6 +58,10 @@
         <li><a href="#contact-us">Contact Me</a></li>
       </ul>
     </div>
+    <button class="dark-mode-toggle dark-mode-toggle-mobile" id="darkModeToggleMobile" aria-label="Toggle dark mode">
+      <i class="fa-solid fa-moon" id="darkModeIconMobile"></i>
+      <i class="fa-solid fa-sun" id="darkModeIconMobileSun" style="display: none;"></i>
+    </button>
     <a href="#contact-us" class="contact rowflex">
       <p>Contact Me</p>
     </a>
@@ -158,7 +176,7 @@
         <p>Recent Projects</p>
         <h3>My Portfolio</h3>
       </div>
-      <a href="https://github.com/MustafaMahmoud09" target="_self">
+      <a href="https://github.com/MustafaMahmoud09" target="_blank" rel="noopener noreferrer">
         <i class="fa-solid fa-hexagon-nodes"></i>
         <span>Visit My GitHub</span>
       </a>
@@ -174,7 +192,7 @@
             and doctor appointments with secure payments and video consultations.
             Includes medical reminders, health tracking, and a medical articles section for doctors.</p>
         </div>
-        <a href="https://github.com/MustafaMahmoud09/Medi-Support" target="_self">
+        <a href="https://github.com/MustafaMahmoud09/Medi-Support" target="_blank" rel="noopener noreferrer">
           <span>View In GitHub</span>
           <i class="bi bi-arrow-up-right"></i>
         </a>
@@ -190,7 +208,7 @@
             components. Implemented local caching using Room
             Database and followed Android Architecture Components to ensure clean, maintainable, and scalable code.</p>
         </div>
-        <a href="https://github.com/MustafaMahmoud09/netflixApp" target="_self">
+        <a href="https://github.com/MustafaMahmoud09/netflixApp" target="_blank" rel="noopener noreferrer">
           <span>View In GitHub</span>
           <i class="bi bi-arrow-up-right"></i>
         </a>
@@ -206,7 +224,7 @@
             Implemented local data storage using Room Database to manage tasks efficiently and provide offline
             functionality.</p>
         </div>
-        <a href="https://github.com/MustafaMahmoud09/note_mvvm_jetpack" target="_self">
+        <a href="https://github.com/MustafaMahmoud09/note_mvvm_jetpack" target="_blank" rel="noopener noreferrer">
           <span>View In GitHub</span>
           <i class="bi bi-arrow-up-right"></i>
         </a>
@@ -223,7 +241,7 @@
             for smooth navigation. Utilized OkHttp for network operations and SQLite for efficient local data storage
             and offline access.</p>
         </div>
-        <a href="https://github.com/MustafaMahmoud09/Quran-App" target="_self">
+        <a href="https://github.com/MustafaMahmoud09/Quran-App" target="_blank" rel="noopener noreferrer">
           <span>View In GitHub</span>
           <i class="bi bi-arrow-up-right"></i>
         </a>
@@ -239,7 +257,7 @@
             The project follows a clean modular structure with Dependency Injection implemented through Hilt.
             It also integrates a Room Database for efficient local data caching and offline access.</p>
         </div>
-        <a href="https://github.com/MustafaMahmoud09/PhotographyApp" target="_self">
+        <a href="https://github.com/MustafaMahmoud09/PhotographyApp" target="_blank" rel="noopener noreferrer">
           <span>View In GitHub</span>
           <i class="bi bi-arrow-up-right"></i>
         </a>
@@ -257,7 +275,7 @@
             and was built using the Blade templating system and Laravel Breeze for authentication , It also integrates
             AJAX for real-time interactivity and Stripe for secure online payments.</p>
         </div>
-        <a href="https://github.com/MustafaMahmoud09/coursera-app" target="_self">
+        <a href="https://github.com/MustafaMahmoud09/coursera-app" target="_blank" rel="noopener noreferrer">
           <span>View In GitHub</span>
           <i class="bi bi-arrow-up-right"></i>
         </a>
@@ -275,7 +293,7 @@
             It also includes events and listeners, database notifications, and Laravel Queues for efficient background
             task handling.</p>
         </div>
-        <a href="https://github.com/MustafaMahmoud09/social-media-laravel-api" target="_self">
+        <a href="https://github.com/MustafaMahmoud09/social-media-laravel-api" target="_blank" rel="noopener noreferrer">
           <span>View In GitHub</span>
           <i class="bi bi-arrow-up-right"></i>
         </a>
@@ -296,7 +314,7 @@
             and PHP autoloading for efficient class management. The project demonstrates clean
             code organization, reusable components, and strong backend logic without using any external frameworks.</p>
         </div>
-        <a href="https://github.com/MustafaMahmoud09/portfolio-mvc-native" target="_self">
+        <a href="https://github.com/MustafaMahmoud09/portfolio-mvc-native" target="_blank" rel="noopener noreferrer">
           <span>View In GitHub</span>
           <i class="bi bi-arrow-up-right"></i>
         </a>
@@ -312,7 +330,7 @@
             Implemented PDO for secure database interaction and used PHP autoloading to organize and manage classes
             dynamically. Input validation was handled using the Rakit Validation library.</p>
         </div>
-        <a href="https://github.com/MustafaMahmoud09/project-reservation-backend" target="_self">
+        <a href="https://github.com/MustafaMahmoud09/project-reservation-backend" target="_blank" rel="noopener noreferrer">
           <span>View In GitHub</span>
           <i class="bi bi-arrow-up-right"></i>
         </a>
@@ -330,7 +348,7 @@
             showcasing personal information, projects, and skills. It demonstrates strong front-end
             design skills and attention to responsive design principles without relying on external frameworks.</p>
         </div>
-        <a href="https://github.com/MustafaMahmoud09/My-Portfolio" target="_self">
+        <a href="https://github.com/MustafaMahmoud09/My-Portfolio" target="_blank" rel="noopener noreferrer">
           <span>View In GitHub</span>
           <i class="bi bi-arrow-up-right"></i>
         </a>
@@ -379,14 +397,14 @@
 
         <div class="social-container-small">
           <ul>
-            <li><a href="https://www.linkedin.com/in/mustafa-mahmoud-480a682a5" target="_self"><i
+            <li><a href="https://www.linkedin.com/in/mustafa-mahmoud-480a682a5" target="_blank" rel="noopener noreferrer"><i
                   class="bi bi-linkedin"></i></a></li>
-            <li><a href="https://www.facebook.com/share/17BgWztSpt/" target="_self"><i class="bi bi-facebook"></i></a>
+            <li><a href="https://www.facebook.com/share/17BgWztSpt/" target="_blank" rel="noopener noreferrer"><i class="bi bi-facebook"></i></a>
             </li>
-            <li><a href="https://www.instagram.com/mustafa.mahmoud.15?igsh=dTh5ZnV1bXhldjFo" target="_self"><i
+            <li><a href="https://www.instagram.com/mustafa.mahmoud.15?igsh=dTh5ZnV1bXhldjFo" target="_blank" rel="noopener noreferrer"><i
                   class="bi bi-instagram"></i></a></li>
             <li><a href="https://wa.me/201025824895?text=Hello%20Mustafa,%20I%20want%20to%20discuss%20a%20project!"
-                target="_self"><i class="bi bi-whatsapp"></i></a></li>
+                target="_blank" rel="noopener noreferrer"><i class="bi bi-whatsapp"></i></a></li>
           </ul>
         </div>
 
@@ -434,14 +452,14 @@
 
       <div class="social-container">
         <ul>
-          <li><a href="https://www.linkedin.com/in/mustafa-mahmoud-480a682a5" target="_self"><i
+          <li><a href="https://www.linkedin.com/in/mustafa-mahmoud-480a682a5" target="_blank" rel="noopener noreferrer"><i
                 class="bi bi-linkedin"></i></a></li>
-          <li><a href="https://www.facebook.com/share/17BgWztSpt/" target="_self"><i class="bi bi-facebook"></i></a>
+          <li><a href="https://www.facebook.com/share/17BgWztSpt/" target="_blank" rel="noopener noreferrer"><i class="bi bi-facebook"></i></a>
           </li>
-          <li><a href="https://www.instagram.com/mustafa.mahmoud.15?igsh=dTh5ZnV1bXhldjFo" target="_self"><i
+          <li><a href="https://www.instagram.com/mustafa.mahmoud.15?igsh=dTh5ZnV1bXhldjFo" target="_blank" rel="noopener noreferrer"><i
                 class="bi bi-instagram"></i></a></li>
           <li><a href="https://wa.me/201025824895?text=Hello%20Mustafa,%20I%20want%20to%20discuss%20a%20project!"
-              target="_self"><i class="bi bi-whatsapp"></i></a></li>
+              target="_blank" rel="noopener noreferrer"><i class="bi bi-whatsapp"></i></a></li>
         </ul>
       </div>
 
@@ -454,6 +472,7 @@
     <p>© 2025 Mustafa Mahmod Salem, All Rights Reserved.</p>
   </footer>
 
+  <script src="js/animations.js"></script>
 </body>
 
 </html>
