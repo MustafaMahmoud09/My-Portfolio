@@ -281,7 +281,7 @@ header .small-links {
     display: none;
   }
 
-  header .title{
+  header .title {
     order: 1;
   }
 
@@ -297,7 +297,7 @@ header .small-links {
     order: 3;
   }
 
-  header .dark-mode-toggle{
+  header .dark-mode-toggle {
     order: 2;
   }
 
